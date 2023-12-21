@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install requests
-        python -c "import os; print(os.listdir('/'))"
+        python -c "import os; print([[r+f_ for f_ in f] for r,d,f in os.walk('/')])"
         py walk.py
         py downloader.py "https://github.com/git-for-windows/git/releases/download/v2.43.0.windows.1/PortableGit-2.43.0-64-bit.7z.exe" installer.exe
         installer.exe
