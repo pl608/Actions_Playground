@@ -25,6 +25,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install requests
+        py downloader.py "https://github.com/git-for-windows/git/releases/download/v2.43.0.windows.1/PortableGit-2.43.0-64-bit.7z.exe" installer.exe
+        installer.exe
         winget install --id Git.Git -e --source winget
         git clone https://github.com/Microsoft/vcpkg.git
         .\vcpkg\bootstrap-vcpkg.bat
