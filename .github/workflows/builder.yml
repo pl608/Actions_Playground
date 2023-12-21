@@ -37,7 +37,7 @@ jobs:
         py download.py "https://aka.ms/vs/17/release/vs_buildtools.exe" installer.exe
         installer.exe --quiet
         tar -xf cmake.zip
-        "cmake-3.28.1-windows-x86_64\bin\cmake.exe" . -G"Visual Studio 15 2017 Win64" -DCMAKE_TOOLCHAIN_FILE=.vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_GETTEXT=OFF -DENABLE_CURSES=OFF
+        "cmake-3.28.1-windows-x86_64\bin\cmake.exe" -G"Visual Studio 15 2017 Win64" -DCMAKE_TOOLCHAIN_FILE=.vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=Release -DENABLE_GETTEXT=OFF -DENABLE_CURSES=OFF
         "cmake-3.28.1-windows-x86_64\bin\cmake.exe" --build . --config Release
         dir
     
