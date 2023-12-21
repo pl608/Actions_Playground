@@ -1,4 +1,6 @@
 from sys import argv
+from os import system
+system('pip install requests')
 from requests import get, head
 if argv.__len__() > 1:
   h = head(argv[1]).headers.get('Content-Length', None)
