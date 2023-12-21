@@ -1,6 +1,6 @@
 from sys import argv
+from requests import get, head
 if argv.__len__() > 1:
-  from requests import get, head
   h = head(argv[1]).headers.get('Content-Length', None)
   if argv.__len__() > 2: filename = argv[2]
   else: filename = argv[1].split('/')[-1]
